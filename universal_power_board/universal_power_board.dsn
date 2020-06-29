@@ -24,6 +24,14 @@
       (path pcb 0  150500 -111500  112000 -111500  112000 -74000  150500 -74000
             150500 -111500)
     )
+    (plane GND (polygon F.Cu 0  112000 -74000  150500 -74000  150500 -111500  112000 -111500
+            112000 -74000))
+    (plane GND (polygon B.Cu 0  112000 -74000  150500 -74000  150500 -111500  112000 -111500
+            112000 -74000))
+    (plane GND (polygon F.Cu 0  112000 -74000  150500 -74000  150500 -111500  112000 -111500
+            112000 -74000))
+    (plane GND (polygon B.Cu 0  112000 -74000  150500 -74000  150500 -111500  112000 -111500
+            112000 -74000))
     (via "Via[0-1]_800:400_um")
     (rule
       (width 250)
@@ -33,11 +41,22 @@
     )
   )
   (placement
+    (component "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+      (place J10 140208 -106680 front 270 (PN "5V OUTPUT"))
+      (place J9 134620 -106680 front 270 (PN "5V OUTPUT"))
+      (place J8 145796 -101600 front 0 (PN "5V OUTPUT"))
+      (place J7 145796 -96012 front 0 (PN "5V OUTPUT"))
+      (place J5 145796 -90424 front 0 (PN "5V OUTPUT"))
+      (place J4 145796 -84836 front 0 (PN "5V OUTPUT"))
+    )
+    (component Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder
+      (place C1 121900 -94900 front 270 (PN "22uF 25V"))
+    )
     (component "Connector_AMASS:AMASS_XT30U-F_1x02_P5.0mm_Vertical"
-      (place J12 141000 -82000 front 90 (PN "BATT OUTPUT"))
-      (place J11 134500 -82000 front 90 (PN "BATT OUTPUT"))
-      (place J6 121500 -82000 front 90 (PN "BATT OUTPUT"))
-      (place J3 128000 -82000 front 90 (PN "BATT OUTPUT"))
+      (place J12 140200 -77100 front 270 (PN "BATT OUTPUT"))
+      (place J11 134000 -77100 front 270 (PN "BATT OUTPUT"))
+      (place J6 121600 -77100 front 270 (PN "BATT OUTPUT"))
+      (place J3 127800 -77100 front 270 (PN "BATT OUTPUT"))
     )
     (component MountingHole:MountingHole_3.2mm_M3_ISO7380_Pad
       (place H4 147500 -108500 front 0 (PN MountingHole))
@@ -58,15 +77,6 @@
       (place R2 123000 -101500 front 180 (PN 150))
       (place R1 124000 -94875 front 270 (PN 1K))
       (place C2 139000 -91125 front 90 (PN "10uF 10V"))
-      (place C1 122000 -94875 front 270 (PN "22uF 25V"))
-    )
-    (component "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
-      (place J10 146000 -102500 front 0 (PN "5V OUTPUT"))
-      (place J9 146000 -86000 front 0 (PN "5V OUTPUT"))
-      (place J8 139500 -109000 front 90 (PN "5V OUTPUT"))
-      (place J7 134000 -109000 front 90 (PN "5V OUTPUT"))
-      (place J5 146000 -97000 front 0 (PN "5V OUTPUT"))
-      (place J4 146000 -91500 front 0 (PN "5V OUTPUT"))
     )
     (component "Connector_Hirose:Hirose_DF13-06P-1.25DSA_1x06_P1.25mm_Vertical"
       (place J1 120250 -108500 front 0 (PN "Pixhawk Power"))
@@ -76,6 +86,59 @@
     )
   )
   (library
+    (image "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+      (outline (path signal 50  4450 2200  -2450 2200))
+      (outline (path signal 50  4450 -3300  4450 2200))
+      (outline (path signal 50  -2450 -3300  4450 -3300))
+      (outline (path signal 50  -2450 2200  -2450 -3300))
+      (outline (path signal 100  3950 1700  -1950 1700))
+      (outline (path signal 100  3950 -2800  3950 1700))
+      (outline (path signal 100  -1950 -2800  3950 -2800))
+      (outline (path signal 100  -1950 1700  -1950 -2800))
+      (outline (path signal 100  -2360 2110  -2360 860))
+      (outline (path signal 100  -1110 2110  -2360 2110))
+      (outline (path signal 120  -2360 2110  -2360 860))
+      (outline (path signal 120  -1110 2110  -2360 2110))
+      (outline (path signal 120  1000 -2300  1000 -1800))
+      (outline (path signal 120  1100 -1800  1100 -2300))
+      (outline (path signal 120  900 -1800  1100 -1800))
+      (outline (path signal 120  900 -2300  900 -1800))
+      (outline (path signal 120  4060 -800  3450 -800))
+      (outline (path signal 120  4060 500  3450 500))
+      (outline (path signal 120  -2060 -800  -1450 -800))
+      (outline (path signal 120  -2060 500  -1450 500))
+      (outline (path signal 120  1500 1200  1500 1810))
+      (outline (path signal 120  3450 1200  1500 1200))
+      (outline (path signal 120  3450 -2300  3450 1200))
+      (outline (path signal 120  -1450 -2300  3450 -2300))
+      (outline (path signal 120  -1450 1200  -1450 -2300))
+      (outline (path signal 120  500 1200  -1450 1200))
+      (outline (path signal 120  500 1810  500 1200))
+      (outline (path signal 120  -300 1910  -600 1910))
+      (outline (path signal 120  -600 2010  -600 1810))
+      (outline (path signal 120  -300 2010  -600 2010))
+      (outline (path signal 120  -300 1810  -300 2010))
+      (outline (path signal 120  4060 1810  -2060 1810))
+      (outline (path signal 120  4060 -2910  4060 1810))
+      (outline (path signal 120  -2060 -2910  4060 -2910))
+      (outline (path signal 120  -2060 1810  -2060 -2910))
+      (pin Oval[A]Pad_1200x1750_um 2 2000 0)
+      (pin RoundRect[A]Pad_1200x1750_250.95_um 1 0 0)
+    )
+    (image Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder
+      (outline (path signal 50  1850 -950  -1850 -950))
+      (outline (path signal 50  1850 950  1850 -950))
+      (outline (path signal 50  -1850 950  1850 950))
+      (outline (path signal 50  -1850 -950  -1850 950))
+      (outline (path signal 120  -261.252 -710  261.252 -710))
+      (outline (path signal 120  -261.252 710  261.252 710))
+      (outline (path signal 100  1000 -600  -1000 -600))
+      (outline (path signal 100  1000 600  1000 -600))
+      (outline (path signal 100  -1000 600  1000 600))
+      (outline (path signal 100  -1000 -600  -1000 600))
+      (pin RoundRect[T]Pad_1150x1400_250.95_um 2 1025 0)
+      (pin RoundRect[T]Pad_1150x1400_250.95_um 1 -1025 0)
+    )
     (image "Connector_AMASS:AMASS_XT30U-F_1x02_P5.0mm_Vertical"
       (outline (path signal 50  -3100 -1800  -1400 -3100))
       (outline (path signal 50  -3100 1800  -1400 3100))
@@ -172,45 +235,6 @@
       (outline (path signal 100  -800 -400  -800 400))
       (pin RoundRect[T]Pad_1050x950_238.404_um 2 875 0)
       (pin RoundRect[T]Pad_1050x950_238.404_um 1 -875 0)
-    )
-    (image "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
-      (outline (path signal 50  4450 2200  -2450 2200))
-      (outline (path signal 50  4450 -3300  4450 2200))
-      (outline (path signal 50  -2450 -3300  4450 -3300))
-      (outline (path signal 50  -2450 2200  -2450 -3300))
-      (outline (path signal 100  3950 1700  -1950 1700))
-      (outline (path signal 100  3950 -2800  3950 1700))
-      (outline (path signal 100  -1950 -2800  3950 -2800))
-      (outline (path signal 100  -1950 1700  -1950 -2800))
-      (outline (path signal 100  -2360 2110  -2360 860))
-      (outline (path signal 100  -1110 2110  -2360 2110))
-      (outline (path signal 120  -2360 2110  -2360 860))
-      (outline (path signal 120  -1110 2110  -2360 2110))
-      (outline (path signal 120  1000 -2300  1000 -1800))
-      (outline (path signal 120  1100 -1800  1100 -2300))
-      (outline (path signal 120  900 -1800  1100 -1800))
-      (outline (path signal 120  900 -2300  900 -1800))
-      (outline (path signal 120  4060 -800  3450 -800))
-      (outline (path signal 120  4060 500  3450 500))
-      (outline (path signal 120  -2060 -800  -1450 -800))
-      (outline (path signal 120  -2060 500  -1450 500))
-      (outline (path signal 120  1500 1200  1500 1810))
-      (outline (path signal 120  3450 1200  1500 1200))
-      (outline (path signal 120  3450 -2300  3450 1200))
-      (outline (path signal 120  -1450 -2300  3450 -2300))
-      (outline (path signal 120  -1450 1200  -1450 -2300))
-      (outline (path signal 120  500 1200  -1450 1200))
-      (outline (path signal 120  500 1810  500 1200))
-      (outline (path signal 120  -300 1910  -600 1910))
-      (outline (path signal 120  -600 2010  -600 1810))
-      (outline (path signal 120  -300 2010  -600 2010))
-      (outline (path signal 120  -300 1810  -300 2010))
-      (outline (path signal 120  4060 1810  -2060 1810))
-      (outline (path signal 120  4060 -2910  4060 1810))
-      (outline (path signal 120  -2060 -2910  4060 -2910))
-      (outline (path signal 120  -2060 1810  -2060 -2910))
-      (pin Oval[A]Pad_1200x1750_um 2 2000 0)
-      (pin RoundRect[A]Pad_1200x1750_250.95_um 1 0 0)
     )
     (image "Connector_Hirose:Hirose_DF13-06P-1.25DSA_1x06_P1.25mm_Vertical"
       (outline (path signal 50  8200 2700  -1950 2700))
@@ -338,6 +362,20 @@
             328.898 472.282))
       (attach off)
     )
+    (padstack RoundRect[T]Pad_1150x1400_250.95_um
+      (shape (polygon F.Cu 0  368.578 697.139  410.831 685.817  450.476 667.33  486.309 642.24
+            517.24 611.309  542.33 575.476  560.817 535.831  572.139 493.578
+            575.951 450.001  575.951 -450.001  572.139 -493.578  560.817 -535.831
+            542.33 -575.476  517.24 -611.309  486.309 -642.24  450.476 -667.33
+            410.831 -685.817  368.578 -697.139  325.001 -700.951  -325.001 -700.951
+            -368.578 -697.139  -410.831 -685.817  -450.476 -667.33  -486.309 -642.24
+            -517.24 -611.309  -542.33 -575.476  -560.817 -535.831  -572.139 -493.578
+            -575.951 -450.001  -575.951 450.001  -572.139 493.578  -560.817 535.831
+            -542.33 575.476  -517.24 611.309  -486.309 642.24  -450.476 667.33
+            -410.831 685.817  -368.578 697.139  -325.001 700.951  325.001 700.951
+            368.578 697.139))
+      (attach off)
+    )
     (padstack RoundRect[A]Pad_1200x1750_250.95_um
       (shape (polygon F.Cu 0  393.578 872.139  435.831 860.817  475.476 842.33  511.309 817.24
             542.24 786.309  567.33 750.476  585.817 710.831  597.139 668.578
@@ -384,14 +422,14 @@
   )
   (network
     (net GND
-      (pins J12-2 J11-2 J6-2 J3-2 J2-1 U1-7 U1-3 U1-1 R5-2 R4-2 R3-2 R2-2 J10-2 J9-2
-        J8-2 J7-2 J5-2 J4-2 J1-6 J1-5 C2-2 C1-2)
+      (pins J10-2 J9-2 J8-2 J7-2 J5-2 J4-2 C1-2 J12-1 J11-1 J6-1 J3-1 J2-1 U1-7 U1-3
+        U1-1 R5-2 R4-2 R3-2 R2-2 J1-6 J1-5 C2-2)
     )
     (net +BATT
-      (pins J12-1 J11-1 J6-1 J3-1 J2-2 U1-2 R1-1 C1-1)
+      (pins C1-1 J12-2 J11-2 J6-2 J3-2 J2-2 U1-2 R1-1)
     )
     (net +5V
-      (pins U1-5 U1-4 R3-1 J10-1 J9-1 J8-1 J7-1 J5-1 J4-1 J1-2 J1-1 D1-2 C2-1)
+      (pins J10-1 J9-1 J8-1 J7-1 J5-1 J4-1 U1-5 U1-4 R3-1 J1-2 J1-1 D1-2 C2-1)
     )
     (net "Net-(D1-Pad1)"
       (pins R5-1 D1-1)
