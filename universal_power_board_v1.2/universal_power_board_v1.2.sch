@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:universal_power_board-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -231,10 +230,6 @@ F 3 "" H 2150 5050 50  0001 C CNN
 	1    2150 5050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2500 4600 2150 4600
-Wire Wire Line
-	2500 4800 2150 4800
 $Comp
 L Device:R_Small R1
 U 1 1 5EDCBAB9
@@ -259,8 +254,6 @@ F 3 "~" H 1700 4850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1700 4650 1700 4700
-Wire Wire Line
-	2500 4700 1700 4700
 Connection ~ 1700 4700
 Wire Wire Line
 	1700 4700 1700 4750
@@ -830,12 +823,12 @@ Connection ~ 5000 3500
 Wire Wire Line
 	5000 3500 5900 3500
 Wire Wire Line
-	2150 4400 2150 4600
-Wire Wire Line
 	2150 4800 2150 5050
+Wire Wire Line
+	2150 4400 2150 4600
 $Comp
 L Connector:Conn_01x03_Male J1
-U 1 1 60365C77
+U 1 1 603768FB
 P 2700 4700
 F 0 "J1" H 2672 4724 50  0000 R CNN
 F 1 "Conn_01x03_Male" H 2672 4633 50  0000 R CNN
@@ -844,4 +837,10 @@ F 3 "~" H 2700 4700 50  0001 C CNN
 	1    2700 4700
 	-1   0    0    -1  
 $EndComp
+Wire Wire Line
+	2150 4600 2500 4600
+Wire Wire Line
+	2150 4800 2500 4800
+Wire Wire Line
+	1700 4700 2500 4700
 $EndSCHEMATC
